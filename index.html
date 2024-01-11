@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Resize</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div>
+        <div class="buttons-wrappper">
+            <button class="btn" id="save">
+                <i class='bx bxs-save'></i>
+            </button>
+            <button class="btn">
+                <i class='bx bx-expand-alt'></i>
+            </button>
+            <button class="btn">
+                <i class='bx bx-expand-alt'></i>
+            </button>
+            <button class="btn">
+                <i class='bx bx-expand-alt'></i>
+            </button>
+        </div>
+        <div class="image-zone" id="image-zone">
+            <img src="whore.jpg" alt=""  id="image">
+            <div class='resizable-area' draggable="false" id="cropper">
+                <div class='resizers'>                    
+                    <div class="side top"></div>
+                    <div class="side right"></div>
+                    <div class="side bottom"></div>
+                    <div class="side left"></div>    
+                    <div class="grid horizontal h-1"></div>
+                    <div class="grid horizontal h-2"></div>
+                    <div class="grid vertical v-1"></div>
+                    <div class="grid vertical v-2"></div>    
+                    <div class='corner top-left'></div>
+                    <div class='corner top-right'></div>
+                    <div class='corner bottom-left'></div>
+                    <div class='corner bottom-right'></div>    
+                </div>                        
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

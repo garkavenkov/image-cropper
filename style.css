@@ -1,0 +1,148 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.image-zone {
+  width: 600px;
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+}
+.image-zone img {
+  object-fit: contain;
+}
+
+.resizable-area-container {
+  position: relative;
+}
+
+.resizable-area {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 150px;
+  left: 150px;
+  border: 1px dashed #7e7e7e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 0 200vh rgba(0, 0, 0, 0.5);
+  /*
+  .buttons {
+      color: wheat;
+      display: flex;
+      position: absolute;
+      bottom: -3rem;
+      // margin-top: 1rem;
+
+      button {
+          font-size: 1rem;
+          line-height: 1rem;
+          border: 1px solid #e7e7e7;
+          border-radius: 10px;
+          outline: none;
+          background-color: white;
+          padding: 5px;
+          // background: transparent;
+          &:not(:last-of-type) {
+              margin-right: 1rem;
+          }
+      }
+  }
+  */
+}
+.resizable-area .resizers {
+  z-index: 100;
+}
+.resizable-area .resizers .corner {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: red;
+  border: 3px solid black;
+  position: absolute;
+}
+.resizable-area .resizers .corner.top-left {
+  left: -3px;
+  top: -3px;
+  cursor: nwse-resize;
+}
+.resizable-area .resizers .corner.top-right {
+  right: -3px;
+  top: -3px;
+  cursor: nesw-resize;
+}
+.resizable-area .resizers .corner.bottom-left {
+  left: -3px;
+  bottom: -3px;
+  cursor: nesw-resize;
+}
+.resizable-area .resizers .corner.bottom-right {
+  right: -3px;
+  bottom: -3px;
+  cursor: nwse-resize;
+}
+.resizable-area .resizers .side {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: red;
+  border: 3px solid black;
+  position: absolute;
+}
+.resizable-area .resizers .side.top {
+  top: -3px;
+  cursor: row-resize;
+  left: 50%;
+}
+.resizable-area .resizers .side.right {
+  right: -3px;
+  cursor: col-resize;
+  top: 50%;
+}
+.resizable-area .resizers .side.bottom {
+  bottom: -3px;
+  cursor: row-resize;
+  left: 50%;
+}
+.resizable-area .resizers .side.left {
+  left: -3px;
+  cursor: col-resize;
+  top: 50%;
+}
+.resizable-area .resizers .grid {
+  position: absolute;
+}
+.resizable-area .resizers .grid.horizontal {
+  height: 3px;
+  width: 100%;
+  border-bottom: 1px dashed #7e7e7e;
+  left: 0;
+}
+.resizable-area .resizers .grid.horizontal.h-1 {
+  top: 33.3%;
+}
+.resizable-area .resizers .grid.horizontal.h-2 {
+  top: 66.6%;
+}
+.resizable-area .resizers .grid.vertical {
+  width: 3px;
+  height: 100%;
+  border-right: 1px dashed #7e7e7e;
+  top: 0;
+}
+.resizable-area .resizers .grid.vertical.v-1 {
+  left: 33.3%;
+}
+.resizable-area .resizers .grid.vertical.v-2 {
+  left: 66.6%;
+}
+
+.hide {
+  transition: 0.01s;
+  transform: translateX(-9999px);
+}
+
+/*# sourceMappingURL=style.css.map */
